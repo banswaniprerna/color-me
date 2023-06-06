@@ -1,0 +1,43 @@
+<html>
+	<head>
+	<title>Color Me App</title>
+	
+	<style>
+	*{font-size:50px;}
+	</style>
+
+	<script>
+	
+	function cc()
+	{
+	event.preventDefault();
+	let colors=["red", "green", "blue", "pink", "gray"];
+	let r=parseInt(Math.random()*colors.length);
+//Math.random() floating pnt no generate karta hai eg:0.4568435, 
+	  					    //0.7981369, 
+						    //0.48888893,  sab 0. mai hi aata hai values
+//color.length jo hai 5 woh multiply hoga toh milega alag values every time u run
+//eg:0.2548
+//   1.4863156		
+//   2.46863
+//   3.48864     4.something ke aage nhi jayega. mtlb 5 tak nhi jayega. means 5 colors hai toh 4 tak 
+	       //jayega. agar 6 colors hote toh 5.something tak jata.
+
+	document.body.style.backgroundColor=colors[r];
+	}
+
+	</script>
+
+	</head>
+
+	<body>
+	<center>
+	<h1> holi hai </h1>
+	<form onsubmit="cc()">
+	<input type="submit" value="mohe rang de" />
+	</form>
+	
+	</center>
+	</body>
+</html>
+
